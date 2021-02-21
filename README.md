@@ -33,6 +33,6 @@ odd(range(10))
 >>> [1, 3, 5, 7, 9]
 ```
 
-## Parameters
+### Parameters
 
 Positional parameters and keyword parameters, required parameters or optional parameters.
