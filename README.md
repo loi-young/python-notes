@@ -1,5 +1,13 @@
 # Python notes
 
+## Assignment
+
+```py
+name = 'leiguoyang'
+age = 32
+is_married = False
+```
+
 ## Date structures
 
 There are four main data structures in python.
