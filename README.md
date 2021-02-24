@@ -36,3 +36,25 @@ odd(range(10))
 ### Parameters
 
 Positional parameters and keyword parameters, required parameters or optional parameters.
+
+### List comprehension
+
+A list comprehension follows this format, where the if conditional is optional.
+
+`[expression for element in collection if conditional]`
+
+For example.
+
+Case 1, w/o if conditional.
+
+```py
+# returns the squares of numbers
+squares = [i ** 2 for i in range(1, 11)]
+```
+
+Case 2, w/ if conditional.
+
+```py
+# returns the even numbers
+even_nums = [num for num in range(1, 11) if num % 2 == 0]
+```
