@@ -58,3 +58,8 @@ Case 2, w/ if conditional.
 # returns the even numbers
 even_nums = [num for num in range(1, 11) if num % 2 == 0]
 ```
+
+## Removing python
+
+Follow this reference to remove a specific version of Python. (https://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4)[https://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4].
+
