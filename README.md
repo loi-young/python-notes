@@ -63,3 +63,23 @@ even_nums = [num for num in range(1, 11) if num % 2 == 0]
 
 Follow this reference to remove a specific version of Python. [How to uninstall Python](https://stackoverflow.com/questions/3819449/how-to-uninstall-python-2-7-on-a-mac-os-x-10-6-4)
 
+## Class
+
+```py
+class Person(object):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def is_suitable(self, candidate):
+        if candidate.age <= self.age and candidate.age >= 18:
+            return True
+        else:
+            return False
+
+leiguoyang= Person('leiguoyang', 32)
+Mary = Person('Mary', 37)
+
+result = leiguoyang.is_suitable(Mary)
+```
+
