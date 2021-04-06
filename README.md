@@ -35,7 +35,33 @@ odd(range(10))
 
 ### Parameters
 
-Positional parameters and keyword parameters, required parameters or optional parameters.
+Parameter with default value.
+
+```py
+def say(message='hi'):
+    print(message)
+```
+
+Call with default value.
+
+```py
+say()
+```
+
+The `message` parameter here can either be a positional parameter or a keyword parameter.
+
+Call with positional argument.
+
+```py
+say('Nice to meet you')
+```
+
+Call with keyword argument.
+
+```py
+say(message='Good night')
+```
+
 
 ### List comprehension
 
