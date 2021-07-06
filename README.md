@@ -109,3 +109,20 @@ Mary = Person('Mary', 37)
 result = leiguoyang.is_suitable(Mary)
 ```
 
+## Import a module
+
+A module is a file containing Python definitions and statements. The code below is to import a module.
+
+```py
+import module_name
+```
+
+Say you have a file called `person.py` and there is a class `Person` in it. Now if you want to access the `Person` class to create in instance from it, the code looks like this.
+
+```py
+import person
+
+person.Person('leiguoyang', 32)
+```
+
+More details about module, please refer to [Module](https://docs.python.org/3/tutorial/modules.html) doc.
