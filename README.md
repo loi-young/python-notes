@@ -35,20 +35,16 @@ odd(range(10))
 
 ### Parameters
 
-Parameter with default value.
+When defining a function, parameters can either be positional or keywords.
 
 ```py
-def say(message='hi'):
-    print(message)
+def say(message):
+    return message
 ```
 
-Call with default value.
+Here `message` is a positional parameter or a keyword parameter.
 
-```py
-say()
-```
-
-The `message` parameter here can either be a positional parameter or a keyword parameter.
+A function can be called using positional arguments or keyword arguments. 
 
 Call with positional argument.
 
@@ -62,6 +58,18 @@ Call with keyword argument.
 say(message='Good night')
 ```
 
+The `message` parameter is a required parameter. A function can also defined with parameter with default value. For example,
+
+```py
+def say(message='hi'):
+    return message
+```
+
+Call with default value.
+
+```py
+say()
+```
 
 ### List comprehension
 
