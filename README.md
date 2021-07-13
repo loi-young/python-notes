@@ -71,6 +71,16 @@ Call with default value.
 say()
 ```
 
+### Return statement
+
+If there is no `return` statement in a function, the default returned value is `None`. For example,
+
+```py
+def add(a, b):
+    result = a + b
+```
+
+
 ### List comprehension
 
 A list comprehension follows this format, where the if conditional is optional.
