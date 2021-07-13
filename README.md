@@ -35,6 +35,8 @@ odd(range(10))
 
 ### Parameters
 
+#### Positional parameter and keyword parameter
+
 When defining a function, parameters can either be positional or keywords.
 
 ```py
@@ -57,6 +59,8 @@ Call with keyword argument.
 ```py
 say(message='Good night')
 ```
+
+#### Required parameter and optional parameter
 
 The `message` parameter is a required parameter. A function can also defined with parameter with default value. For example,
 
