@@ -148,3 +148,34 @@ person.Person('leiguoyang', 32)
 ```
 
 More details about module, please refer to [Module](https://docs.python.org/3/tutorial/modules.html) doc.
+
+## Virtual environment (Jul 17, 2021)
+
+Create a virtual environment before you start a python project please. With a virtual env, you can easily manage your package installation and dependencies. 
+
+The official guide on creating and using a virtual environment is here. https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment. Please follow it.
+
+Usually at first you may create a `requirements.txt` to specify the versions of packages you want to install and then use `pip` to install them. A `requirements.txt` file may look like this.
+
+```
+certifi==2021.5.30
+charset-normalizer==2.0.3
+idna==3.2
+requests==2.26.0
+urllib3==1.26.6
+```
+
+Install with `pip`.
+
+```
+python3 -m pip install -r requirements.txt
+```
+
+## pip
+
+pip is the package installer for python. You can use it to install any python packages.
+
+```
+python3 -m pip install package_name
+```
+
