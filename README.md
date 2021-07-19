@@ -179,3 +179,10 @@ pip is the package installer for python. You can use it to install any python pa
 python3 -m pip install package_name
 ```
 
+## Error and exception (Jul 19, 2021)
+
+There are two kinds of errors.
+
+- Syntax error.
+- Exception. Errors detected during execution are called exceptions.
+
