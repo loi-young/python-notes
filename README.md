@@ -186,3 +186,6 @@ There are two kinds of errors.
 - Syntax error.
 - Exception. Errors detected during execution are called exceptions.
 
+## Keywords arguments (Jul 22, 2021)
+
+Please read this article, very clear on calling and defining function with keywords. https://www.geeksforgeeks.org/args-kwargs-python/
