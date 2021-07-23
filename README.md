@@ -75,6 +75,43 @@ Call with default value.
 say()
 ```
 
+### `*` & `**` in function definition and calls
+
+`*` in function definition.
+
+```py
+def greet(*names):
+    for name in names:
+        print(f'Hello, {name}')
+```
+
+This function can receive zero or multiple positional arguments. 
+
+```py
+greet('leiguoyang')
+greet('leiguoyang', 'Mary')
+```
+
+When calling this function, at first it packs all positional arguments into a tuple called `names`.
+
+`**` in function definition.
+
+```py
+def print_specs(**specs):
+    for key, value in specs.items():
+        print(f'key: {key}, value: {value}')
+```
+
+`**` is used to pack an arbitray number of keyword arguments into a dictionary.
+
+```py
+print_specs(size='large', color='green')
+```
+
+In this case, at first it packs all the keyword arguments into a dictionary called `specs`.
+
+`*` and `**` can used to unpack argument during function calls.
+
 ### Return statement
 
 If there is no `return` statement in a function, the default returned value is `None`. For example,
@@ -185,7 +222,3 @@ There are two kinds of errors.
 
 - Syntax error.
 - Exception. Errors detected during execution are called exceptions.
-
-## Keywords arguments (Jul 22, 2021)
-
-Please read this article, very clear on calling and defining function with keywords. https://www.geeksforgeeks.org/args-kwargs-python/
