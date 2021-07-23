@@ -112,6 +112,30 @@ In this case, at first it packs all the keyword arguments into a dictionary call
 
 `*` and `**` can used to unpack argument during function calls.
 
+`*` is used to unpack a list or tuple of arguments into seperate positional arguments.
+
+```py
+def some_args(arg_1, arg_2, arg_3):
+    print("arg_1:", arg_1)
+    print("arg_2:", arg_2)
+    print("arg_3:", arg_3)
+
+args = ("Sammy", "Casey", "Alex")
+some_args(*args)
+```
+
+`**` is used to unpack a dictionary into multiple keyword arguments.
+
+```py
+def some_kwargs(kwarg_1, kwarg_2, kwarg_3):
+    print("kwarg_1:", kwarg_1)
+    print("kwarg_2:", kwarg_2)
+    print("kwarg_3:", kwarg_3)
+
+kwargs = {"kwarg_1": "Val", "kwarg_2": "Harper", "kwarg_3": "Remy"}
+some_kwargs(**kwargs)
+```
+
 ### Return statement
 
 If there is no `return` statement in a function, the default returned value is `None`. For example,
