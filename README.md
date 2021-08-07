@@ -251,3 +251,46 @@ There are two kinds of errors.
 
 - Syntax error.
 - Exception. Errors detected during execution are called exceptions.
+
+## Falsy & truthy values in python
+
+One of the advantages of using truthy and falsy values is that they can help you make your code more concise and readable. Consider this form snippet I define in Django.
+
+```
+<div class="mb-3">
+    <label for="{{ form.title.id_for_label }}" class="form-label">标题</label>
+    {% if form.title.errors %}
+        <ul class="alert alert-info">
+        {% for error in form.title.errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {{ form.title }}
+</div>
+```
+
+It means if there is any errors, output them. In other words, if the `errors` is not an empty list, do something with it.
+
+Falsy values includes:
+
+- Sequences and collections
+  - Empty lists `[]`
+  - Empty tuples `()`
+  - Empty dictionaries `{}`
+  - Empty sets `()`
+  - Empty strings `''`
+  - Empty ranges `range(0)`
+- Numbers: Zero of any numeric type
+  - Integer: `0`
+  - Float: `0.0`
+  - Complex: `0j`
+- Constants
+  - `None`
+  - `False`
+
+Truthy values includes:
+
+- Non-empty sequences or collections (lists, tuples, strings, dictionaries, sets).
+- Numeric values that are not zero.
+- Constant: `True`.
