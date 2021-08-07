@@ -256,7 +256,7 @@ There are two kinds of errors.
 
 One of the advantages of using truthy and falsy values is that they can help you make your code more concise and readable. Consider this form snippet I define in Django.
 
-```
+```html
 <div class="mb-3">
     <label for="{{ form.title.id_for_label }}" class="form-label">标题</label>
     {% if form.title.errors %}
