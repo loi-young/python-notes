@@ -294,3 +294,7 @@ Truthy values includes:
 - Non-empty sequences or collections (lists, tuples, strings, dictionaries, sets).
 - Numeric values that are not zero.
 - Constant: `True`.
+
+## Decorator (Aug 14, 2021)
+
+这个视频讲解的非常清楚。[Python Decorators in 15 Minutes](https://www.youtube.com/watch?v=r7Dtus7N4pI)
