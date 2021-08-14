@@ -297,4 +297,59 @@ Truthy values includes:
 
 ## Decorator (Aug 14, 2021)
 
+A decorator function may like this.
+
+```py
+# A decorator
+def f1(func):
+    def wrapper():
+        print('Start')
+        func()
+        print('End')
+    return wrapper
+
+# Decorates a function
+@f1
+def f():
+    print('Hello')
+
+# Call a decorated function
+f()
+```
+
+`@f1`相当于对`f`这个function进行decorate后又重新assign给一个同样名为`f`的variable。`@f1`这种形式只是一种syntax，上面的代码相当于：
+
+```py
+def f1(func):
+    def wrapper():
+        print('Start')
+        func()
+        print('End')
+    return wrapper
+
+def f():
+    print('Hello')
+
+f = f1(f)
+
+f()
+```
+
+Decorates a function with parameters.
+
+```py
+def f1(func):
+    def wrapper(*args, **kwargs):
+        print('Start')
+        func(*args, **kwargs)
+        print('End')
+    return wrapper
+
+@f1
+def f(a):
+    print(a)
+
+f('Hello')
+```
+
 这个视频讲解的非常清楚。[Python Decorators in 15 Minutes](https://www.youtube.com/watch?v=r7Dtus7N4pI)
