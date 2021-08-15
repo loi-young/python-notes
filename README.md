@@ -77,6 +77,17 @@ say()
 
 ### `*` & `**` in function definition and calls
 
+`*` and `**` are used to pack / unpack arguments during function calls. They are often used to pass optional positional or keyword arguments from one function to another. For example, the following is a decorator function.
+
+```py
+def f1(func):
+    def wrapper(*args, **kwargs):
+        print('Start')
+        func(*args, **kwargs)
+        print('End')
+    return wrapper
+```
+
 `*` in function definition.
 
 ```py
@@ -110,7 +121,7 @@ print_specs(size='large', color='green')
 
 In this case, at first it packs all the keyword arguments into a dictionary called `specs`.
 
-`*` and `**` can used to unpack argument during function calls.
+`*` and `**` can used to unpack arguments during function calls.
 
 `*` is used to unpack a list or tuple of arguments into seperate positional arguments.
 
