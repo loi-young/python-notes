@@ -308,7 +308,7 @@ Truthy values includes:
 
 ## Decorator (Aug 14, 2021)
 
-A decorator function may like this.
+实际上，A decorator is a function. 顾名思义，decorator就是用来修饰其它function的。A decorator function may like this.
 
 ```py
 # A decorator
