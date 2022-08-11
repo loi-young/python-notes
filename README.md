@@ -306,9 +306,9 @@ Truthy values includes:
 - Numeric values that are not zero.
 - Constant: `True`.
 
-## Decorator (Aug 14, 2021)
+## Decorator
 
-实际上，A decorator is a function. 顾名思义，decorator就是用来修饰其它function的。A decorator function may like this.
+A decorator is a function. It is used to decorate other function in order to extend its functionality. A decorator may like this.
 
 ```py
 # A decorator
