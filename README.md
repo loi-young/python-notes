@@ -35,7 +35,7 @@ odd(range(10))
 
 ### lambda function
 
-In fact, a lamdda function is an anonymous function like in JavaScript. A lambda function is an expression which evaluates to a function reference. There is only one expression in a lambda function.
+In fact, a lambda function is an anonymous function like in JavaScript. A lambda function is an expression which evaluates to a function reference. There is only one expression in a lambda function.
 
 ```py
 filter(lambda passenger: passenger.age > 35, passengers)
@@ -46,10 +46,10 @@ This statement is used to select the passenger whose age is greater than 35 year
 A lambda function is like an arrow function in JavaScript.
 
 ```js
-    var words = ['lei', 'guo', 'yang'];
+var words = ['lei', 'guo', 'yang'];
 
-    // Selects the word whose length is greater than 3
-    var result = words.filter(word => word.length > 3);
+// Selects the word whose length is greater than 3
+var result = words.filter(word => word.length > 3);
 ```
 
 ### Parameters
