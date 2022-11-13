@@ -107,7 +107,7 @@ def f1(func):
     return wrapper
 ```
 
-## `*` in function definitions.
+#### `*` in function definitions.
 
 `*` is used to pack an arbitrary number of positional arguments in a tuple. For example,
 
@@ -127,7 +127,7 @@ greet('leiguoyang', 'Mary')
 
 When calling this function, at first it packs all positional arguments into a tuple called `names`.
 
-## `**` in function definitions.
+#### `**` in function definitions.
 
 `**` is used to pack an arbitray number of keyword arguments into a dictionary. For example,
 
@@ -148,7 +148,7 @@ When calling this function, at first it packs all the keyword arguments into a d
 
 `*` and `**` can used to unpack arguments during function calls.
 
-## `*` in function calls
+#### `*` in function calls
 
 `*` is used to unpack a list or tuple into seperate positional arguments.
 
@@ -162,7 +162,7 @@ args = ("Sammy", "Casey", "Alex")
 some_args(*args)
 ```
 
-## `**` in function calls
+#### `**` in function calls
 
 `**` is used to unpack a dictionary into multiple keyword arguments.
 
