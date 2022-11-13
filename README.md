@@ -94,7 +94,7 @@ Call with default value.
 say()
 ```
 
-### `*` & `**` in function definition and calls
+### `*` & `**` in function definitions and calls
 
 `*` and `**` are used to pack / unpack arguments during function calls. They are often used to pass optional positional or keyword arguments from one function to another. For example, the following is a decorator function.
 
@@ -107,7 +107,9 @@ def f1(func):
     return wrapper
 ```
 
-`*` in function definition.
+## `*` in function definitions.
+
+`*` is used to pack an arbitrary number of positional arguments in a tuple. For example,
 
 ```py
 def greet(*names):
@@ -118,13 +120,16 @@ def greet(*names):
 This function can receive zero or multiple positional arguments. 
 
 ```py
+greet()
 greet('leiguoyang')
 greet('leiguoyang', 'Mary')
 ```
 
 When calling this function, at first it packs all positional arguments into a tuple called `names`.
 
-`**` in function definition.
+## `**` in function definitions.
+
+`**` is used to pack an arbitray number of keyword arguments into a dictionary. For example,
 
 ```py
 def print_specs(**specs):
@@ -132,17 +137,20 @@ def print_specs(**specs):
         print(f'key: {key}, value: {value}')
 ```
 
-`**` is used to pack an arbitray number of keyword arguments into a dictionary.
+This function can receive zero or multiple keyword arguments. 
 
 ```py
+print_specs()
 print_specs(size='large', color='green')
 ```
 
-In this case, at first it packs all the keyword arguments into a dictionary called `specs`.
+When calling this function, at first it packs all the keyword arguments into a dictionary called `specs`.
 
 `*` and `**` can used to unpack arguments during function calls.
 
-`*` is used to unpack a list or tuple of arguments into seperate positional arguments.
+## `*` in function calls
+
+`*` is used to unpack a list or tuple into seperate positional arguments.
 
 ```py
 def some_args(arg_1, arg_2, arg_3):
@@ -153,6 +161,8 @@ def some_args(arg_1, arg_2, arg_3):
 args = ("Sammy", "Casey", "Alex")
 some_args(*args)
 ```
+
+## `**` in function calls
 
 `**` is used to unpack a dictionary into multiple keyword arguments.
 
