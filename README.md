@@ -307,10 +307,51 @@ python3 -m pip install package_name
 
 ## Error and exception (Jul 19, 2021)
 
-There are two kinds of errors.
+There are two kinds of errors, syntax error and exception.
 
-- Syntax error.
-- Exception. Errors detected during execution are called exceptions.
+### Syntax error
+
+For example,
+
+```py
+print 'nice to meet you'
+```
+
+will raise a SyntaxError.
+
+```
+>>> print 'nice to meet you'
+  File "<stdin>", line 1
+    print 'nice to meet you'
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print('nice to meet you')?
+```
+
+### Exception
+
+Errors detected during execution are called exceptions. For example, `ZeroDivisionError` and `TypeError`.
+
+My understanding of exception handling. Some pesudo code here
+
+```py
+try:
+    to do sth
+except some exception:
+    to handle the exception
+```
+
+```py
+try:
+    1 / 0
+except ZeroDivisionError:
+    print('Can\'t divided by 0, please check your statement or expression. Thanks.')
+```
+
+output.
+
+```
+Can't divided by 0, please check your statement or expression. Thanks.
+```
 
 ## Falsy & truthy values in python
 
