@@ -307,7 +307,7 @@ python3 -m pip install package_name
 
 ## Error and exception (Jul 19, 2021)
 
-There are two kinds of errors. Syntax and Exceiption.
+There are two kinds of errors, syntax error and exception.
 
 ### Syntax error
 
