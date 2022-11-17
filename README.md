@@ -259,7 +259,21 @@ More details about module, please refer to [Module](https://docs.python.org/3/tu
 
 Create a virtual environment before you start a python project please. With a virtual env, you can easily manage your package installation and dependencies. 
 
-The official guide on creating and using a virtual environment is here. https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment. Please follow it.
+The official guide on creating and using a virtual environment is here. https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment.
+
+First, in your project direcotry use this command to create a virtual environment.
+
+```
+python3 -m venv env
+```
+
+where `env` is the location where your virtual environment lives.
+
+Second, use this command to activate your virtual environment.
+
+```
+source env/bin/activate
+```
 
 Usually at first you may create a `requirements.txt` to specify the versions of packages you want to install and then use `pip` to install them. A `requirements.txt` file may look like this.
 
@@ -275,6 +289,12 @@ Install with `pip`.
 
 ```
 python3 -m pip install -r requirements.txt
+```
+
+Use this command to create a `requirements.txt` listing all package dependencies in your current virtual environment.
+
+```
+pip freeze > requirements.txt
 ```
 
 ## pip
