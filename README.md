@@ -277,6 +277,12 @@ Install with `pip`.
 python3 -m pip install -r requirements.txt
 ```
 
+Use this command to create a `requirements.txt` listing all package dependencies in your current virtual environment.
+
+```
+pip freeze > requirements.txt
+```
+
 ## pip
 
 pip is the package installer for python. You can use it to install any python packages.
