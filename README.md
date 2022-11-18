@@ -221,21 +221,38 @@ class Person:
         self.age = age
 
     def is_suitable(self, candidate):
-        return candidate.age <= self.age and candidate.age >= 18
+        # return candidate.age <= self.age and candidate.age >= 18
+        return 18 <= candidate.age <= self.age
+
+    def __str__(self):
+        return f"{self.name}"
 ```
+
+`__init__` is a constructor. In a class definition, each method's first parameter must be a place where the reference to the current object being called can be assigned, usually this parameter is called `self`. Therefore during the execution of each method, any attributes or methods of the current object can be accessible.
 
 Create an instance.
 
-```
+```py
 leiguoyang= Person('leiguoyang', 32)
 Mary = Person('Mary', 37)
 ```
 
+The process when `Person('leiguoyang', 32)` is called.
+
+  1. A new empty `Person` object is created.
+  2. The `__init__` method is called. The reference to the new object is assgined to the `self` parameter. And the other arguments also assigned to the corresponding parameters if any.
+  3. The body of the constructor is executed step by step to add attributes to the object.
+  4. The populated object is then returned and assigned to the variable `leiguoyang`.
+
 Call an instance method.
 
-```
+```py
 result = leiguoyang.is_suitable(Mary)
 ```
+
+## Inheritance
+
+## Composition
 
 ## Import a module
 
