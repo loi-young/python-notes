@@ -454,3 +454,88 @@ f('Hello')
 ```
 
 这个视频讲解的非常清楚。[Python Decorators in 15 Minutes](https://www.youtube.com/watch?v=r7Dtus7N4pI)
+
+## Unit test
+
+Use `unittest` module to test.
+
+```py
+import unittest
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def is_suitable(self, candidate):
+        # return candidate.age <= self.age and candidate.age >= 18
+        return 18 <= candidate.age <= self.age
+
+    def __str__(self):
+        return f"{self.name}"
+
+# test the Person class
+class TestPerson(unittest.TestCase):
+    def setUp(self):
+        self.person = Person('leiguoyang', 34)
+
+    def test_create_a_person(self):
+        self.assertEqual(self.person.name, 'leiguoyang')
+        self.assertEqual(self.person.age, 34)
+
+    def test_is_suitable_when_candidate_is_older(self):
+        mary = Person('Mary', 35)
+        self.assertFalse(self.person.is_suitable(mary))
+
+    def test_is_suitable_when_candidate_is_younger_but_older_than_18(self):
+        jessie = Person('Jessie', 27)
+        self.assertTrue(self.person.is_suitable(jessie))
+
+    def test_is_suitable_when_candidate_is_less_than_18(self):
+        lucy = Person('Lucy', 17)
+        self.assertFalse(self.person.is_suitable(lucy))
+
+    def test_str(self):
+        self.assertEqual((self.person.__str__()), 'leiguoyang')
+```
+
+Each test method must start with `test`.
+
+Run this command to start test.
+
+```
+python3 -m unittest first_function.py
+```
+
+output.
+
+```
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+```
+
+`.` means one test is passed, `E` means an error and `F` means a failure. `OK` means all unit tests pass.
+
+You can also add `-v` to your command to get more detailed output.
+
+```
+python3 -m unittest -v first_function.py
+```
+
+output.
+
+```
+test_create_a_person (first_function.TestPerson) ... ok
+test_is_suitable_when_candidate_is_less_than_18 (first_function.TestPerson) ... ok
+test_is_suitable_when_candidate_is_older (first_function.TestPerson) ... ok
+test_is_suitable_when_candidate_is_younger_but_older_than_18 (first_function.TestPerson) ... ok
+test_str (first_function.TestPerson) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+```
