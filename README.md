@@ -230,6 +230,8 @@ class Person:
 
 `__init__` is a constructor. In a class definition, each method's first parameter must be a place where the reference to the current object being called can be assigned, usually this parameter is called `self`. Therefore during the execution of each method, any attributes or methods of the current object can be accessible.
 
+In fact, a function is a block of code running in a specific environment or scope. When calling a method on an object, first the reference to this object is passed to this method's first parameter, so during the scope of a function, with `self` you can get access to the current object's methods or attributes.
+
 Create an instance.
 
 ```py
