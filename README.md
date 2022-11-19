@@ -252,6 +252,17 @@ result = leiguoyang.is_suitable(Mary)
 
 ## Inheritance
 
+```py
+class Worker(Person):
+    def __init__(self, name, age, job):
+        super().__init__(name, age)
+        self.job = job
+
+worker = Worker('leiguoyang', 34, 'CEO')
+```
+
+`super()` refers to the super class in order to access its methods or attributes. In the above case, during the execution of `Worker.__init__()`, the `__init__` method from the super class `Person` is used to create the first two attributes which are `name` and `age` respectively. And then `self.job = job` is executed.
+
 ## Composition
 
 ## Import a module
