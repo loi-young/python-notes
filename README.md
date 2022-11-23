@@ -79,6 +79,21 @@ Call with keyword argument.
 say(message='Good night')
 ```
 
+#### Positional-only and Keyword-only parameter
+
+This is the syntax on a function definition.
+
+```py
+def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+      -----------    ----------     ----------
+        |             |                  |
+        |        Positional or keyword   |
+        |                                - Keyword only
+         -- Positional only
+```
+
+Parameters before `,\` are positional-only paramters, parameter after `*,` are keyword-only parameters.
+
 #### Required parameter and optional parameter
 
 The `message` parameter is a required parameter. A function can also defined with parameter with default value. For example,
