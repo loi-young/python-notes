@@ -1,5 +1,12 @@
 # Python notes
 
+## Principles of making efficient notes
+
+The purpose of making notes on programming is to help you get more comfortable with it and be more proficient in it. So please follow these principles to make efficient notes.
+
+  - First, describe a concept clearly, including what it is, what is it for and what motivates you use it or its features. For example, why use `try / except` block in your program.
+  - Second, give a concrete semantic example to show the syntax.
+  
 ## Assignment
 
 ```py
