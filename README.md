@@ -591,3 +591,20 @@ Ran 5 tests in 0.000s
 
 OK
 ```
+
+## Regular expressions (Dec 23, 2022)
+
+A regular expression is a pattern used to find matches in a text in order to manipulate the text. For example, to validate a phone number like `020-88520520` by using this regular expression
+
+```py
+r'^\d{3}-\d{8}'
+```
+
+where `^` means match at the beginning of the text. `\d` is a special character in a regular expression, meaning any decimal digits from 0 to 9. `{3}` or `{8}` means 3 or 8 repetitions of the preceding character, in this case, `{3}` means the text should contain three consecutive decimal digits like `020`.
+
+### Key concepts in regular expressions
+
+  - Character set (`[abc]`, `[0-9]`)
+  - Special character (`.`, `^`, `$`, `*`, `+`, `?` etc)
+  - Quantifier (`{3}`, `*`, `+`, `?`)
+  - Group (`(.com|.org)`)
