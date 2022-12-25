@@ -594,10 +594,10 @@ OK
 
 ## Regular expressions (Dec 23, 2022)
 
-A regular expression is a pattern used to find matches in a text in order to manipulate the text. For example, to validate a phone number like `020-88520520` by using this regular expression
+A regular expression or RE is a string pattern used to find matches in a text in order to manipulate the text. For example, to validate a phone number like `020-88520520` by using this regular expression
 
 ```py
-r'^\d{3}-\d{8}'
+r'^\d{3}-\d{8}$'
 ```
 
 where `^` means match at the beginning of the text. `\d` is a special character in a regular expression, meaning any decimal digits from 0 to 9. `{3}` or `{8}` means 3 or 8 repetitions of the preceding character, in this case, `{3}` means the text should contain three consecutive decimal digits like `020`.
@@ -608,3 +608,32 @@ where `^` means match at the beginning of the text. `\d` is a special character 
   - Special character (`.`, `^`, `$`, `*`, `+`, `?` etc)
   - Quantifier (`{3}`, `*`, `+`, `?`)
   - Group (`(.com|.org)`)
+
+### To find matches in a text
+
+Use the `re.search`, `re.findall` or `re.finditer` method to find matches in a text.
+
+```py
+def phone_number_validator(phone_number):
+    return re.search(r'^\d{3}-\d{8}$', phone_number)
+```
+
+`re.search` method returns a `Match` object.
+
+```py
+print(phone_number_validator('020-88520520'))
+```
+
+output: `<re.Match object; span=(0, 12), match='020-88520520'>`.
+
+Use `Match.group` method to get the matched string.
+
+```py
+print(phone_number_validator('020-88520520').group())
+```
+
+output: `020-88520520`.
+
+While `re.search` only finds the first match, `re.findall` finds all matches in a text and returns them as a list.
+
+### To manipulate a text, split or replace
