@@ -116,9 +116,22 @@ Call with default value.
 say()
 ```
 
-### `*` & `**` in function definitions and calls
+### Return statement
 
-`*` and `**` are used to pack / unpack arguments during function calls. They are often used to pass optional positional or keyword arguments from one function to another. For example, the following is a decorator function.
+If there is no `return` statement in a function, the default returned value is `None`. For example,
+
+```py
+def add(a, b):
+    result = a + b
+```
+
+## Make flexible functions with `*` & `**`
+
+`*` and `**` are used to pack / unpack arguments during function calls. **They are often used to pass optional positional or keyword arguments from one function to another**. So you can make very flexible function with them. 
+
+For example, the pandas's <a href="https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.GroupBy.apply.html?highlight=apply#pandas.core.groupby.GroupBy.apply">`GroupBy.apply(func, *args, **kwargs)`</a> method used to process grouped data. You can pass any number of positional or keyword arguments to `func`, the function you define, through `apply`. So you are free to make very flexible `func` you need.
+
+This design pattern is also used on decorator function. For example,
 
 ```py
 def f1(func):
@@ -129,7 +142,7 @@ def f1(func):
     return wrapper
 ```
 
-#### `*` in function definitions.
+### `*` in function definitions
 
 `*` is used to pack an arbitrary number of positional arguments in a tuple. For example,
 
@@ -149,7 +162,7 @@ greet('leiguoyang', 'Mary')
 
 When calling this function, at first it packs all positional arguments into a tuple called `names`.
 
-#### `**` in function definitions.
+### `**` in function definitions
 
 `**` is used to pack an arbitray number of keyword arguments into a dictionary. For example,
 
@@ -170,7 +183,7 @@ When calling this function, at first it packs all the keyword arguments into a d
 
 `*` and `**` can used to unpack arguments during function calls.
 
-#### `*` in function calls
+### `*` in function calls
 
 `*` is used to unpack a list or tuple into seperate positional arguments.
 
@@ -184,7 +197,7 @@ args = ("Sammy", "Casey", "Alex")
 some_args(*args)
 ```
 
-#### `**` in function calls
+### `**` in function calls
 
 `**` is used to unpack a dictionary into multiple keyword arguments.
 
@@ -198,17 +211,7 @@ kwargs = {"kwarg_1": "Val", "kwarg_2": "Harper", "kwarg_3": "Remy"}
 some_kwargs(**kwargs)
 ```
 
-### Return statement
-
-If there is no `return` statement in a function, the default returned value is `None`. For example,
-
-```py
-def add(a, b):
-    result = a + b
-```
-
-
-### List comprehension
+## List comprehension
 
 A list comprehension follows this format, where the if conditional is optional.
 
