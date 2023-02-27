@@ -696,5 +696,5 @@ The `os` module is used to control the file system.
 `os.mkdir(path)` -> create a new directory named path.
 `os.chdir(path)` -> change to the path.
 `os.os.environ` -> a dict of environment variables.
-`os.listdir` -> list all entries in the path. *`.` and `..` are excluded*.
+`os.listdir(path)` -> list all entries in the path. *`.` and `..` are excluded*.
 
