@@ -641,7 +641,7 @@ While `re.search` only finds the first match, `re.findall` finds all matches in 
 
 ### To manipulate a text, split or replace
 
-## File handling
+## File handling (Feb 27, 2023)
 
 ### Reading
 
@@ -658,7 +658,7 @@ with open(path, 'r') as file:
   - `r` -> read mode.
   - `w` -> write mode. *It overwrites the file*.
   - `a` -> append mode.
-  - 'rb' -> `b` means binary mode.
+  - `rb` -> `b` means binary mode.
 
 Common methods on reading a file.
 
@@ -692,9 +692,8 @@ Use the `io` module to process stream, for example, to create Excel, PDF files i
 
 The `os` module is used to control the file system.
 
-`os.getcwd()` -> get the current directory path.
-`os.mkdir(path)` -> create a new directory named path.
-`os.chdir(path)` -> change to the path.
-`os.os.environ` -> a dict of environment variables.
-`os.listdir(path)` -> list all entries in the path. *`.` and `..` are excluded*.
-
+  - `os.getcwd()` -> get the current directory path.
+  - `os.mkdir(path)` -> create a new directory named path.
+  - `os.chdir(path)` -> change to the path.
+  - `os.os.environ` -> a dict of environment variables.
+  - `os.listdir(path)` -> list all entries in the path. *`.` and `..` are excluded*.
