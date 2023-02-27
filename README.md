@@ -640,3 +640,61 @@ output: `020-88520520`.
 While `re.search` only finds the first match, `re.findall` finds all matches in a text and returns them as a list.
 
 ### To manipulate a text, split or replace
+
+## File handling
+
+### Reading
+
+You need to open a file before reading or writing it.
+
+```py
+with open(path, 'r') as file:
+    content = file.read()
+    return content
+```
+
+`r` stands for reading mode. There are several modes.
+
+  - `r` -> read mode.
+  - `w` -> write mode. *It overwrites the file*.
+  - `a` -> append mode.
+  - 'rb' -> `b` means binary mode.
+
+Common methods on reading a file.
+
+  - `read` -> read the whole file. If you want to read a specific size of text from a file, use `read(50)` for example.
+  - `readline` -> read a line from file.
+  - `readlines` -> read all lines from file.
+
+File attributes.
+
+  - `file.name` -> get the file name.
+
+### Writing
+
+Use `write` method to write text to a file.
+
+```py
+with open('data/message', 'w') as file:
+    file.write(
+        'You are becoming more comfortable with Programming.\n'
+        'Keep going and create your own product and services.'
+    )
+```
+
+*Note: If the file specified does not exist yet, a file will be created at first.*
+
+### Binary file handling
+
+Use the `io` module to process stream, for example, to create Excel, PDF files in Django web apps.
+
+### `os` module
+
+The `os` module is used to control the file system.
+
+`os.getcwd()` -> get the current directory path.
+`os.mkdir(path)` -> create a new directory named path.
+`os.chdir(path)` -> change to the path.
+`os.os.environ` -> a dict of environment variables.
+`os.listdir(path)` -> list all entries in the path. *`.` and `..` are excluded*.
+
