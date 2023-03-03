@@ -384,16 +384,18 @@ SyntaxError: Missing parentheses in call to 'print'. Did you mean print('nice to
 
 ### Exception
 
-Errors detected during execution are called exceptions. For example, `ZeroDivisionError` and `TypeError`.
+Errors detected during execution are called exceptions. For example, `ZeroDivisionError`, `TypeError` and `FileNotFoundError`.
 
 My understanding of exception handling. Some pesudo code here
 
 ```py
 try:
     to do sth
-except some exception:
+except some exceptions:
     to handle the exception
 ```
+
+For example,
 
 ```py
 try:
@@ -402,10 +404,27 @@ except ZeroDivisionError:
     print('Can\'t divided by 0, please check your statement or expression. Thanks.')
 ```
 
-output.
-
 ```
 Can't divided by 0, please check your statement or expression. Thanks.
+```
+
+### Why handle exceptions (Mar 4, 2023)
+
+Well, you must handle exceptions where excepted, otherwise you program or whole app will stop running! For example, trying to open a file which does not exist will raise an exception called `FileNotFoundError` and stop the program, so you must handle this exception in a suitable way in order to not let your app down!
+
+For example, the following file named `message-hello` is not in my current directory and I try to access it.
+
+```py
+try:
+    with open('message-hello', 'r') as file:
+        file_name = file.name
+        print(file_name)
+except FileNotFoundError as err:
+    print(f'An error occurs: {err}. Please check your path. ☺️')
+```
+
+```
+An error occurs: [Errno 2] No such file or directory: 'message-hello'. Please check your path. ☺️
 ```
 
 ## Falsy & truthy values in python
