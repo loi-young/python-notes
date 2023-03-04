@@ -19,10 +19,66 @@ is_married = False
 
 There are four main data structures in python.
 
-- list. `[1, 2, 3, 4]`
-- tuple. `(1, 2, 3)`
-- dictionary. `{1: 1, 2: 2, 3: 3}`. A dictionary is a key-value pairs.
+- list. `[1, 2, 3, 4]`. a list is *mutable*, means you can change its content.
+- tuple. `(1, 2, 3)`. *immutable*.
+- dictionary. `{1: 1, 2: 2, 3: 3}`. A dictionary is a key-value pairs. The key must be immutable, usually a string or number is used as a key.
 - set. `basket = {'orange', 'banana', 'pear', 'apple'}`. A set is an unordered collection with no duplicate elements. 
+
+### List
+
+### Tuple
+
+The following two ways are valid to create a tuple. w or w/o a `()`.
+
+```py
+a_tuple = 1, 2, 3
+b_tuple = (1, 2, 3)
+```
+
+Accessing an element in a tuple is like that in a list. For example, get the first element of the tuple.
+
+```py
+a_tuple[0]
+```
+
+#### Variable unpacking
+
+```py
+tup = (4, 5, 6)
+a, b, c = tup
+```
+
+Now 4 is assigned to `a`, 5 is assigned to `b` and 6 is assigned to `c` respectively.
+
+```py
+values=1, 2, 3, 4, 5
+a, b, *rest = values
+```
+
+Now `a=1, b=2, and rest=[3, 4, 5]`. Why rest is not a tuple? Surprised.
+
+Now I understand more on why an arbitrary number of positional arguments in a function call is packed into a tuple with `*` notation.
+
+In dealing with a dict involves variable unpacking sometimes. For example,
+
+```py
+product = {'product': 'apple', 'price': 7.98}
+
+for k, v in product.items():
+    print(f'{k}: {v}')
+```
+
+```
+product: apple
+price: 7.98
+```
+
+The `items` on a dictionary returns a list of key-value pairs `dict_items([('product', 'apple'), ('price', 7.98)])`. In the above example you are iterating a list of tuples in fact.
+
+Another common use of a tuple is to return multiple values from a function. For example in a linear calculation function in data science.
+
+
+### Dictionary
 
 ## Function
 
