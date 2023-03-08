@@ -772,3 +772,29 @@ The `os` module is used to control the file system.
   - `os.chdir(path)` -> change to the path.
   - `os.os.environ` -> a dict of environment variables.
   - `os.listdir(path)` -> list all entries in the path. *`.` and `..` are excluded*.
+
+## Character encoding and decoding (Mar 8, 2023)
+
+Each character is represented by a code which is a number. For example, 
+
+```
+64: @
+65: A
+66: B
+67: C
+```
+
+The `chr` function converts a code to a character.
+
+```py
+character = chr(64)
+print(character)
+```
+
+>>> `@`
+
+**ASCII**: there are only 128 codes ranging from 0 to 127 in ASCII.
+**Unicode**: there are more than 1 million characters. The most common encoding format is utf-8.
+
+Converting string to bytes is called **encoding**.
+Converting bytes to string is called **decoding**. Data you received from network are bytes.
