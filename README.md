@@ -110,12 +110,12 @@ task['priority_labels'] = task['priority'].apply(
 output.
 
 ```
-        date                              task  ... priority  priority_labels
-0 2023-04-10            Make pivot table video  ...        1               ⭐️
-1 2023-04-11         Make selecting data video  ...        2             ⭐️⭐️
-2 2023-04-12  Make pandas data structure video  ...        1               ⭐️
-3 2023-04-13            Make time series video  ...        2             ⭐️⭐️
-4 2023-04-14  Make creating a new column video  ...        3           ⭐️⭐️⭐️
+        date                              task  ... priority  priority_label
+0 2023-04-10            Make pivot table video  ...        1              ⭐️
+1 2023-04-11         Make selecting data video  ...        2            ⭐️⭐️
+2 2023-04-12  Make pandas data structure video  ...        1              ⭐️
+3 2023-04-13            Make time series video  ...        2            ⭐️⭐️
+4 2023-04-14  Make creating a new column video  ...        3          ⭐️⭐️⭐️
 ```
 
 感悟：其实编程的核心就是对数据结构的运用得当和处理事情时有条有理。
