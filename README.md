@@ -77,7 +77,60 @@ The `items` on a dictionary returns a list of key-value pairs `dict_items([('pro
 Another common use of a tuple is to return multiple values from a function. For example in a linear calculation function in data science.
 
 
-### Dictionary
+### Dictionary (Apr 17, 2023)
+
+Dictionary 这种key-value pairs的结构真的很好用。比如我有个task table有4栏，如下
+
+```
+        date                              task    weekday  priority
+0 2023-04-10            Make pivot table video     Monday         1
+1 2023-04-11         Make selecting data video    Tuesday         2
+2 2023-04-12  Make pandas data structure video  Wednesday         1
+3 2023-04-13            Make time series video   Thursday         2
+4 2023-04-14  Make creating a new column video     Friday         3
+```
+
+我想增加一栏`priority_label`，如果`priority`为1，则对应的label是⭐️，等等，则可通过dictionary这种mapping结构来实现。
+
+```py
+import pandas as pd
+
+# mapping between priority and symbol
+priority_labels = {
+    1: '⭐️',
+    2: '⭐️⭐️',
+    3: '⭐️⭐️⭐️'
+}
+
+task['priority_label'] = task['priority'].apply(
+    lambda priority: priority_labels[priority]
+)
+```
+
+output.
+
+```
+        date                              task  ... priority  priority_label
+0 2023-04-10            Make pivot table video  ...        1              ⭐️
+1 2023-04-11         Make selecting data video  ...        2            ⭐️⭐️
+2 2023-04-12  Make pandas data structure video  ...        1              ⭐️
+3 2023-04-13            Make time series video  ...        2            ⭐️⭐️
+4 2023-04-14  Make creating a new column video  ...        3          ⭐️⭐️⭐️
+```
+
+感悟：其实编程的核心就是对数据结构的运用得当和处理事情时有条有理。
+
+零感：key-value pairs里的value不一定是literal value如string, number之类，也可以是function reference。比如在一个HR系统，对不同等级的员工进行绩效奖金计算时，可以调用对应的计算公式。
+
+```py
+formulas = {
+    1: func1,
+    2: func2,
+    3: func3
+}
+```
+
+这样的好处是便于管理，使业务逻辑和数据（或者说我们的specs)区别开。
 
 ## Function
 
