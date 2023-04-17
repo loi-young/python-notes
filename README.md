@@ -109,7 +109,7 @@ task['priority_labels'] = task['priority'].apply(
 
 output.
 
-```py
+```
         date                              task  ... priority  priority_labels
 0 2023-04-10            Make pivot table video  ...        1               ⭐️
 1 2023-04-11         Make selecting data video  ...        2             ⭐️⭐️
