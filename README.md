@@ -102,7 +102,7 @@ priority_labels = {
     3: '⭐️⭐️⭐️'
 }
 
-task['priority_labels'] = task['priority'].apply(
+task['priority_label'] = task['priority'].apply(
     lambda priority: priority_labels[priority]
 )
 ```
