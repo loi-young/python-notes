@@ -850,3 +850,7 @@ print(character)
 
 Converting string to bytes is called **encoding**.
 Converting bytes to string is called **decoding**. Data you received from network are bytes.
+
+## `datetime` module
+
+A datetime object consists of three parts: date, time and timezone.
