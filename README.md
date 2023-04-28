@@ -134,6 +134,22 @@ formulas = {
 
 ## Function
 
+### What is a function
+
+A function is a container or box which can do something inside.
+
+### Difference between a function and a method
+
+If a function is going to change an object’s state, it should not be named as function, it should be called method and you should design it as an object’s method.
+
+For example, the `sorted(iterable, /, *, key=None, reverse=False)` function is a function because it does not change the iterable's state, it just returns a new sorted list from the items in iterable. While `list.sort()` is a method because it changes a list's state.
+
+If a function is not going to change an object's state, it is fine to design it as a stand-alone function.
+
+What does object-oriented actually mean? A method is named as a method because it is going to change an object’s state.
+
+Sometimes you may see a method which do not change an object's state is encapsulated in an object, actually it is a function, this is a style issue. You can define it as function or a method.
+
 ### Defining a function
 
 ```py
